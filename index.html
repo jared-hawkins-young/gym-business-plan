@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courts Plus Business Turnaround Plan</title>
+    
+    <!-- Bootstrap & AOS for Animations -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .hero-section {
+            background: linear-gradient(to right, #004e92, #000428);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .section {
+            padding: 100px 20px;
+        }
+        .placeholder {
+            background: #e0e0e0;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #555;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 50px auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #007bff;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: white;
+            border: 4px solid #007bff;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            left: 50%;
+        }
+        .right::after {
+            left: -10px;
+        }
+        .timeline-box {
+            padding: 20px;
+            background: white;
+            position: relative;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .chart-container {
+            max-width: 800px;
+            height: 500px;
+            margin: auto;
+        }
+        .section-header {
+            width: 100%;
+            background: linear-gradient(to right, #004e92, #000428);
+            color: white;
+            text-align: center;
+            padding: 50px 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .section-header h2 {
+            margin: 0;
+            font-size: 2.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Cover Page Section -->
+    <div class="hero-section" data-aos="fade-down">
+        <h1>Business Turnaround Plan</h1>
+        <h3>Courts Plus Health Club</h3>
+        <p>Addressing Challenges and Driving Sustainable Growth</p>
+    </div>
+
+    <!-- EXECUTIVE SUMMARY -->
+    <div class="container section mt-5" data-aos="fade-up">
+        <div class="section-header">
+            <h2>Executive Summary</h2>
+        </div>
+        <p>
+            Courts Plus Health Club is at a critical crossroads, having recorded a 
+            <strong>$38,567 loss</strong> in 2024. These negative margins are exacerbated 
+            by high fixed costs—such as <strong>$63,032</strong> in insurance and 
+            <strong>$62,913</strong> in taxes—as well as an aging infrastructure requiring 
+            over <strong>$100,000</strong> in urgent repairs. Additionally, the club’s 
+            dependency on manual processes is driving up labor expenses, while restricted 
+            operating hours limit the potential for generating new revenue. As modern 
+            facilities offering 24/7 access and digital platforms continue to enter the market, 
+            Courts Plus risks further member attrition and diminishing profitability unless 
+            decisive steps toward modernization are taken.
+        </p>
+        
+        <h3>Current Challenges</h3>
+        <p>
+            The most pressing challenge is financial: the club's ongoing losses and its 
+            significant fixed overhead are draining profitability. Moreover, aging equipment 
+            and facilities not only require immediate funding but also deter new members 
+            seeking more contemporary amenities. Meanwhile, inefficiencies in day-to-day 
+            operations—driven largely by manual processes—continue to push labor costs 
+            higher. If left unaddressed, these issues will further erode the club’s ability 
+            to compete with newer gyms that offer advanced, tech-driven experiences.
+        </p>
+        
+        <h3>Turnaround Strategy</h3>
+        <p>
+            To reverse these trends, Courts Plus must focus on a comprehensive modernization 
+            plan that emphasizes both cost reduction and revenue growth. Automation lies 
+            at the heart of this strategy, from self-service member check-in systems to 
+            streamlined scheduling software, which together reduce labor expenses and free 
+            staff to focus on high-value tasks. Introducing 24/7 access will expand membership 
+            opportunities and attract demographics—including local military personnel—who 
+            demand flexible hours. Enhancing marketing efforts through targeted digital 
+            campaigns will further boost membership, capitalizing on the club’s premium 
+            location and dual-pool amenities. Finally, essential facility upgrades will not 
+            only address pressing safety and maintenance needs but also position the club 
+            to justify premium pricing in line with a modern fitness environment.
+        </p>
+        
+        <h3>Investment Required</h3>
+        <p>
+            With a <strong>purchase price</strong> of <strong>$2.6M</strong>, Courts Plus 
+            remains attractively valued against its <strong>$3.15M</strong> appraisal. To 
+            execute this turnaround, approximately <strong>$150,000</strong> is earmarked 
+            for key facility updates, focusing on both immediate repairs and aesthetic 
+            enhancements. An additional <strong>$64,400</strong> will fund automation systems 
+            that enable digital access control and member management, while 
+            <strong>$100,000</strong> in working capital provides the flexibility to 
+            address unforeseen expenses. Collectively, these investments lay the foundation 
+            for a leaner cost structure, improved member experience, and renewed profitability 
+            in an increasingly competitive fitness market.
+        </p>
+        
+        <!-- Financial Performance Bar Chart -->
+        <div class="text-center mt-5">
+            <canvas id="financialPerformanceChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <!-- CURRENT BUSINESS ANALYSIS -->
+    <div class="container section mt-5" data-aos="fade-up">
+        <div class="section-header">
+            <h2>II. Current Business Analysis</h2>
+        </div>
+        <h3 class="mt-4">Operational Roadblocks</h3>
+        <p>
+            Courts Plus Health Club is burdened by a host of operational inefficiencies that 
+            drive up expenses and hinder growth. Manual processes dominate essential tasks 
+            such as member check-ins, billing, and maintenance scheduling, resulting in 
+            significant labor overhead. This traditional approach diverts staff from 
+            high-impact customer service and strategic initiatives, creating an environment 
+            where day-to-day firefighting takes precedence over forward-thinking improvements. 
+            Compounding these labor-intensive processes are hefty monthly utility bills 
+            totaling <strong>$7,500</strong>, which, combined with outdated equipment and 
+            facilities, continue to erode the bottom line.
+        </p>
+        <p>
+            Additionally, a backlog of urgent repairs underscores the club’s strained 
+            infrastructure. Notable costs include <strong>$51,734</strong> for the main 
+            building roof, <strong>$39,563</strong> for the indoor pool roof, 
+            <strong>$4,747</strong> for gutter replacements, and <strong>$3,495</strong> 
+            for pool chair upgrades. Postponing these issues is a risky gamble: unchecked 
+            maintenance needs can escalate quickly, leading to larger capital outlays and 
+            potentially jeopardizing member safety. Further limiting Courts Plus’s earning 
+            potential are restrictive operating hours that fail to capture the growing 
+            demand for 24/7 access, a competitive standard in today’s modern fitness market.
+        </p>
+        
+        <h3 class="mt-4">Competitive Landscape & Market Opportunities</h3>
+        <p>
+            While Courts Plus boasts a prime location and extensive amenities—including 
+            dual pools, spacious courts, and a variety of fitness programs—these advantages 
+            remain underutilized. Newer, tech-savvy competitors are adept at offering 
+            digitally integrated experiences that seamlessly merge convenience, automation, 
+            and on-demand scheduling. This contrast makes it more difficult for Courts Plus 
+            to retain younger, mobile-first consumers who expect a gym to align with their 
+            dynamic lifestyles.
+        </p>
+        <p>
+            Despite the fierce competition, the market still offers tremendous upside. 
+            The existing membership base is sizable and loyal, but it skews older, signaling 
+            a need for fresh engagement strategies to attract younger demographics and 
+            families. Perhaps most importantly, only <strong>20.3%</strong> of members 
+            hail from the local military community—a significant missed opportunity given 
+            the club’s close proximity to military facilities. By updating operational 
+            processes, investing in targeted marketing, and capitalizing on Courts Plus’s 
+            unique amenities, there is untapped potential to expand market share and 
+            revitalize the club’s financial performance.
+        </p>
+    </div>
+
+    <!-- MODERNIZATION OPPORTUNITIES -->
+    <div class="container section mt-5" data-aos="fade-up">
+        <div class="section-header">
+            <h2>III. Modernization Opportunities</h2>
+        </div>
+        
+        <h3 class="mt-4">Boosting Efficiency Through Automation</h3>
+        <p>
+            Courts Plus Health Club has the chance to dramatically improve efficiency and cut 
+            operating expenses by embracing modern technology. Automated access control systems, 
+            which enable 24/7 facility entry, can significantly reduce staffing requirements 
+            while catering to members who prefer non-traditional workout hours. Likewise, 
+            digital membership management software streamlines both enrollment and payment 
+            processing, eliminating the time-consuming manual tasks currently handled by 
+            on-site staff. Further staffing optimization can be achieved through automated 
+            scheduling and self-service kiosks, allowing front-desk personnel to focus on 
+            high-value interactions and member retention.
+        </p>
+        <p>
+            Substantial savings can also be realized by adopting energy-efficient measures, 
+            such as LED lighting and smart climate control systems, which lower the 
+            club’s monthly utility bills. In addition, modernizing payment processing 
+            capabilities to accept contactless and mobile options meets rising consumer 
+            expectations and enhances overall convenience. Collectively, these automation 
+            initiatives establish a leaner, more flexible operational model, ultimately 
+            improving member satisfaction and reinforcing Courts Plus’s competitive edge 
+            in a crowded market.
+        </p>
+
+        <h3 class="mt-4">Elevating Revenue Through Strategic Growth</h3>
+        <p>
+            Beyond cutting costs, Courts Plus can boost revenues by introducing a suite of 
+            new offerings and engagement tactics. First and foremost, the introduction of 
+            24/7 access appeals to a wider range of lifestyles—from shift workers to 
+            early-morning exercisers—thus opening the door to new membership segments. 
+            By introducing premium membership tiers, the club can upsell added benefits 
+            and exclusive access to specialized classes or reserved equipment, tapping into 
+            a clientele willing to pay more for an enhanced experience.
+        </p>
+        <p>
+            Strategic digital marketing, including targeted social media campaigns and 
+            influencer partnerships, will attract younger demographics and raise the club’s 
+            visibility in the local community. Meanwhile, expanding military-focused programs 
+            can unlock a significant untapped market, given the club’s proximity to nearby 
+            bases. Building on this approach, Courts Plus can also pursue corporate 
+            partnerships with local businesses interested in wellness initiatives for their 
+            employees. In doing so, the club diversifies its revenue streams and positions 
+            itself as the leading fitness destination for diverse segments—from corporate 
+            teams to military personnel.
+        </p>
+
+        <!-- Modernization Investment Breakdown Chart -->
+        <div class="text-center mt-5">
+            <canvas id="modernizationChart" width="400" height="200"></canvas>
+        </div>
+        <p>
+            [Modernization Investment Breakdown Chart: This chart should illustrate the 
+            allocation of funding for various upgrades—automation systems, facility 
+            improvements, marketing campaigns, and energy-efficient technologies—to 
+            clearly demonstrate how each investment drives both immediate savings and 
+            long-term revenue growth.]
+        </p>
+    </div>
+
+    <!-- IMPLEMENTATION TIMELINE -->
+    <div class="container section mt-5" data-aos="fade-up">
+        <div class="section-header">
+            <h2>IV. Implementation Timeline</h2>
+        </div>
+        <div class="timeline">
+            <div class="timeline-container left" data-aos="fade-right">
+                <div class="timeline-box">
+                    <h4>Month 1-2: Foundation Setup</h4>
+                    <p>- Install 24/7 automated access control</p>
+                    <p>- Complete urgent facility repairs</p>
+                    <p>- Roll out digital membership & payment platform</p>
+                </div>
+            </div>
+            
+            <div class="timeline-container right" data-aos="fade-left">
+                <div class="timeline-box">
+                    <h4>Month 3-4: Optimization & Efficiency</h4>
+                    <p>- Restructure staffing for labor savings</p>
+                    <p>- Launch digital-first marketing initiatives</p>
+                    <p>- Initiate corporate partnership outreach</p>
+                </div>
+            </div>
+            
+            <div class="timeline-container left" data-aos="fade-right">
+                <div class="timeline-box">
+                    <h4>Month 5-6: Membership & Revenue Growth</h4>
+                    <p>- Expand military & corporate memberships</p>
+                    <p>- Introduce premium membership tiers</p>
+                    <p>- Implement energy-efficient upgrades</p>
+                </div>
+            </div>
+            
+            <div class="timeline-container right" data-aos="fade-left">
+                <div class="timeline-box">
+                    <h4>Month 7-9: Facility & Service Expansion</h4>
+                    <p>- Launch personal training & wellness programs</p>
+                    <p>- Strengthen social media & influencer marketing</p>
+                    <p>- Implement loyalty rewards to boost retention</p>
+                </div>
+            </div>
+            
+            <div class="timeline-container left" data-aos="fade-right">
+                <div class="timeline-box">
+                    <h4>Month 10-12: Scaling & Long-Term Growth</h4>
+                    <p>- Finalize major facility and equipment upgrades</p>
+                    <p>- Deploy AI-driven scheduling & virtual training options</p>
+                    <p>- Adjust pricing strategies & diversify revenue streams</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FINANCIAL PROJECTIONS -->
+    <div class="container section mt-5" data-aos="fade-up">
+        <div class="section-header">
+            <h2>V. Financial Projections</h2>
+        </div>
+        <p>
+            Courts Plus Health Club’s financial projections illuminate a clear path to 
+            profitability by focusing on key cost-reduction strategies and revenue-driving 
+            initiatives. Through a calculated blend of automation, improved scheduling, and 
+            proactive facility maintenance, labor expenses are forecasted to drop by 
+            <strong>20%</strong>, utilities by <strong>15%</strong>, and long-term maintenance 
+            costs will decline due to more efficient upkeep.
+        </p>
+        
+        <h3>Projected Cost Reductions</h3>
+        <p>
+            These savings come primarily from automating manual tasks, updating climate 
+            controls to reduce energy consumption, and investing in smarter infrastructure 
+            solutions. Taken together, these measures position Courts Plus to manage its 
+            overhead far more effectively, improving overall financial stability.
+        </p>
+        
+        <h3>Projected Revenue Growth</h3>
+        <p>
+            On the revenue side, membership is projected to increase by 
+            <strong>25%</strong> as 24/7 access and enhanced marketing draw new segments 
+            of the community. Diversifying services—through personal training, corporate 
+            wellness packages, and premium membership tiers—will further elevate the 
+            club’s earning potential. Complementing these initiatives, streamlined digital 
+            management will strengthen cash flow and operational efficiency.
+        </p>
+        
+        <!-- Financial Growth Line Chart -->
+        <div class="chart-container mt-5">
+            <canvas id="financialOverviewChart"></canvas>
+        </div>
+        <p>
+            [Financial Growth Line Chart: This chart should track declining costs and 
+            rising revenues over the next 12 months, highlighting the positive impact 
+            of automation, energy efficiency, and membership expansion on profitability.]
+        </p>
+    </div>
+
+    <!-- MARKETING & SOCIAL MEDIA PRESENCE -->
+    <div class="container section mt-5" data-aos="fade-up">
+        <div class="section-header">
+            <h2>VI. Marketing & Social Media Presence</h2>
+        </div>
+        
+        <p>
+            In today’s fitness industry, a strong digital presence is vital for driving 
+            membership growth and retention. Yet, Courts Plus currently lags behind its 
+            local competitors in social media engagement and online visibility. This limited 
+            internet footprint not only reduces brand awareness but also hinders the club’s 
+            ability to attract new members.
+        </p>
+        
+        <h3>Current Social Media Metrics</h3>
+        <p>
+            As of now, Courts Plus has just <strong>262</strong> followers on Instagram, 
+            significantly trailing behind nearby gyms such as Gold’s Gym Jacksonville 
+            (<strong>2,381</strong>), Onslow Fitness (<strong>2,355</strong>), Fit 4 Life 
+            Jacksonville (<strong>3,151</strong>), and the specialized Iron Forged CrossFit 
+            (<strong>13,100</strong>). Facebook engagement also remains minimal, 
+            with no targeted advertising campaigns currently in place. Meanwhile, the club 
+            holds a <strong>3.8-star</strong> rating on Google Reviews but seldom responds 
+            to member feedback, missing an opportunity to improve online reputation. 
+            Compounding these issues, there is <strong>$0</strong> allocated for social media 
+            marketing, leaving significant gaps in brand visibility and engagement.
+        </p>
+        
+        <h3>Competitor Comparison</h3>
+        <div class="chart-container mt-5">
+            <canvas id="socialMediaComparisonChart"></canvas>
+        </div>
+        <p>
+            [Social Media Comparison Chart: This chart should illustrate the gap between 
+            Courts Plus (262 Instagram followers) and its top local competitors—highlighting 
+            follower counts, engagement rates, and average online ratings—to reinforce the 
+            immediate need for a stronger digital marketing strategy.]
+        </p>
+        
+        <h3>Action Plan for Digital Growth</h3>
+        <p>
+            Courts Plus will launch a comprehensive social media overhaul to increase 
+            follower engagement and spotlight its unique amenities. Daily content updates, 
+            member success stories, and behind-the-scenes facility highlights will drive 
+            consistent interaction and showcase the club’s value. Paid digital advertising 
+            on Facebook and Instagram will specifically target local demographics, supported 
+            by a robust <strong>SEO strategy</strong> to boost Google search rankings. By 
+            partnering with local fitness influencers and actively responding to reviews, 
+            Courts Plus can nurture a more authentic, community-focused brand. Over time, 
+            this proactive approach will not only accelerate member acquisition but also 
+            promote long-term loyalty, positioning Courts Plus as the go-to health club in 
+            the Jacksonville market.
+        </p>
+    </div>
+
+    <!-- CONCLUSION & INVESTMENT RECAP -->
+    <div class="container section mt-5" data-aos="fade-up">
+        <div class="section-header">
+            <h2>VII. Conclusion & Investment Recap</h2>
+        </div>
+        <p>
+            Courts Plus Health Club now stands at a pivotal juncture, with this 
+            Turnaround Plan offering a practical blueprint to move from financial 
+            instability toward lasting profitability. By combining modernization 
+            initiatives, cost-saving automation, and carefully targeted market 
+            expansion, the club is poised to regain competitiveness and deliver 
+            sustainable growth.
+        </p>
+        
+        <h3>Key Takeaways</h3>
+        <ul>
+            <li><strong>Turnaround Strategy:</strong> Sharp focus on reducing operating expenses, increasing efficiency, and driving new revenue streams.</li>
+            <li><strong>Investment Requirement:</strong> $2.6M acquisition, plus $150K in facility enhancements and $64.4K dedicated to automation systems.</li>
+            <li><strong>Break-Even Projection:</strong> Profitability expected within 24 months through streamlined operations and 25% revenue growth.</li>
+            <li><strong>Long-Term Sustainability:</strong> Combining cost optimizations with continued membership expansion to secure a robust ROI.</li>
+        </ul>
+        
+        <h3>Call to Action</h3>
+        <p>
+            This investment opportunity is both time-sensitive and uniquely positioned 
+            to capitalize on Courts Plus’s location, existing membership base, and 
+            untapped market segments. By implementing the strategies laid out in this 
+            plan, stakeholders stand to benefit from immediate cost reductions, 
+            reinvigorated marketing efforts, and the appeal of a fully modernized 
+            facility. The path to profitability is clear—now is the moment to act. 
+            With decisive investment and focused execution, Courts Plus will achieve 
+            its vision of becoming a market leader in fitness and wellness for years 
+            to come.
+        </p>
+    </div>
+
+    <!-- Bootstrap & AOS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        AOS.init();
+        setTimeout(() => {
+            AOS.refresh();
+        }, 1000); 
+
+        // Financial Performance Bar Chart
+        document.addEventListener("DOMContentLoaded", function() {
+            var chartCanvas = document.getElementById("financialPerformanceChart");
+            if (chartCanvas) {
+                var ctx = chartCanvas.getContext("2d");
+                new Chart(ctx, {
+                    type: "bar",
+                    data: {
+                        labels: ["2022", "2023", "2024"],
+                        datasets: [{
+                            label: "Annual Profit/Loss ($)",
+                            data: [15000, -12500, -38567],
+                            backgroundColor: function(context) {
+                                var value = context.raw;
+                                return value >= 0 ? "#4caf50" : "#ff5733";
+                            }
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            } else {
+                console.error("Canvas element not found!");
+            }
+        });
+
+        // Market Position Pie Chart
+        document.addEventListener("DOMContentLoaded", function() {
+            var chartCanvas = document.getElementById("marketPositionChart");
+            if (chartCanvas) {
+                var ctx = chartCanvas.getContext("2d");
+                new Chart(ctx, {
+                    type: "pie",
+                    data: {
+                        labels: ["Underutilized Amenities", "Aging Membership", "Competitive Threats", "Limited Military Market", "Location Advantage"],
+                        datasets: [{
+                            data: [30, 25, 20, 15, 10],
+                            backgroundColor: ["#FF4C4C", "#FFB347", "#50C878", "#4682B4", "#1E3A8A"]
+                        }]
+                    }
+                });
+            } else {
+                console.error("Canvas element not found!");
+            }
+        });
+
+        // Modernization Investment Breakdown Chart
+        document.addEventListener("DOMContentLoaded", function() {
+            var chartCanvas = document.getElementById("modernizationChart");
+            if (chartCanvas) {
+                var ctx = chartCanvas.getContext("2d");
+                new Chart(ctx, {
+                    type: "doughnut",
+                    data: {
+                        labels: ["Automation", "Facility Updates", "Marketing", "Staffing Optimization", "Energy Efficiency"],
+                        datasets: [{
+                            data: [30, 25, 20, 15, 10],
+                            backgroundColor: ["#007bff", "#36a2eb", "#50C878", "#FFB347", "#FF4C4C"]
+                        }]
+                    }
+                });
+            } else {
+                console.error("Canvas element not found!");
+            }
+        });
+
+        // Financial Overview Chart with Historical & Projected Data
+        document.addEventListener("DOMContentLoaded", function() {
+            var chartCanvas = document.getElementById("financialOverviewChart");
+            if (chartCanvas) {
+                var ctx = chartCanvas.getContext("2d");
+                new Chart(ctx, {
+                    type: "line",
+                    data: {
+                        labels: ["2022", "2023", "2024", "2025", "2026", "2027"],
+                        datasets: [
+                            {
+                                label: "Revenue ($)",
+                                data: [720000, 672000, 600000, 750000, 900000, 1150000],
+                                borderColor: "#007bff",
+                                backgroundColor: "rgba(0,123,255,0.2)",
+                                fill: true,
+                                tension: 0.3,
+                                borderWidth: 5,
+                                pointRadius: 8,
+                                pointBackgroundColor: "#007bff"
+                            },
+                            {
+                                label: "Expenses ($)",
+                                data: [750000, 725000, 690000, 600000, 550000, 500000],
+                                borderColor: "#ff4c4c",
+                                backgroundColor: "rgba(255,76,76,0.2)",
+                                fill: true,
+                                tension: 0.3,
+                                borderWidth: 5,
+                                pointRadius: 8,
+                                pointBackgroundColor: "#ff4c4c"
+                            },
+                            {
+                                label: "Profit ($)",
+                                data: [-30000, -53000, -90000, 150000, 350000, 650000],
+                                borderColor: "#28a745",
+                                backgroundColor: "rgba(40,167,69,0.2)",
+                                fill: true,
+                                tension: 0.3,
+                                borderWidth: 5,
+                                pointRadius: 8,
+                                pointBackgroundColor: "#28a745"
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                suggestedMin: -100000,
+                                suggestedMax: 1250000
+                            }
+                        },
+                        elements: {
+                            line: {
+                                tension: 0.5
+                            }
+                        }
+                    }
+                });
+            } else {
+                console.error("Canvas element not found!");
+            }
+        });
+
+        // Social Media Comparison Chart
+        document.addEventListener("DOMContentLoaded", function() {
+            var chartCanvas = document.getElementById("socialMediaComparisonChart");
+            if (chartCanvas) {
+                var ctx = chartCanvas.getContext("2d");
+                new Chart(ctx, {
+                    type: "bar",
+                    data: {
+                        labels: [
+                            "Courts Plus",
+                            "Gold's Gym Jacksonville",
+                            "Onslow Fitness",
+                            "Fit 4 Life Jacksonville",
+                            "Iron Forged CrossFit"
+                        ],
+                        datasets: [{
+                            label: "Instagram Followers",
+                            data: [262, 2381, 2355, 3151, 13100],
+                            backgroundColor: [
+                                "#007bff",
+                                "#ff5733",
+                                "#36a2eb",
+                                "#4caf50",
+                                "#8e44ad"
+                            ]
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    
+    </script>
+</body>
+</html>
